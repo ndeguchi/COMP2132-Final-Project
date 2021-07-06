@@ -1,0 +1,284 @@
+/* Natsu Deguchi */
+
+
+/*
+-----------------------
+HTML selectors
+-----------------------
+
+*/
+
+$main_color: #3C6E71;
+$secondry_color: #1D3557;
+$basic_color: #ffffff;
+$border-color: #457B9D;
+
+@mixin button-box($setA, $setB, $round-corners, $border-color){
+    box-shadow:$setA $setB 5px rgb(55, 104, 104);	  
+    border-radius:$round-corners;    
+    border:2px solid $border-color;    
+}
+
+body{
+    background-color: #353535;
+    font-family:calibri;
+    padding:10px;
+    font-size:15px;
+}
+
+header {
+    background-color: $secondry_color;
+    color:$basic_color;
+    font-weight:bold;
+    text-align:center;
+    padding: 10px;
+    font-size: large;
+}
+
+footer {
+    background-color:$secondry_color;
+    color:$basic_color;
+    padding:5px;
+    border-color:$basic_color;
+    margin: 0 auto;
+    padding-left:20px;
+    max-width: 1024px;
+}
+
+img{
+    width: 50px;
+    margin: 20px;
+    height: auto;
+    justify-content: center;
+}
+
+button{
+    background-color: $secondry_color;
+    color: $basic_color;
+    padding: 5px;
+    margin: 5px;
+    
+    @include button-box(2px, 2px, 5px, $main_color);
+   
+}
+
+
+a{
+    background-color: #f0f0f0;
+    color: #E63946;
+    padding:5px;
+    border-radius:10px;
+    text-decoration: none;
+    font-weight: bold;
+    border:solid 2px #E63946
+}
+
+a:hover{    
+    background-color: $basic_color;
+}
+
+h2{
+    text-align: center;
+}
+
+button:hover { 
+    font-weight: 300;
+    background-color: $main_color; 
+}
+
+/*  
+--------------------------------
+CLASS selectors 
+--------------------------------
+*/
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color:$basic_color;
+
+}
+
+
+.heading1{
+    background-color:$secondry_color;
+    color:$basic_color;
+    padding:3px;
+    border-color:#DCDCDC;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:20px;
+}
+
+.h2{
+    
+    color: $main_color;
+    
+ 
+}
+
+.container {
+    display: flex; 
+    justify-content: center; 
+}
+
+.main {
+    background: $basic_color;
+    color: $main_color;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-top: 10px;
+    
+    @include button-box(2px, 2px, 5px, $border_color);
+}
+
+.side {
+    background: $basic_color;
+    color: $main_color;
+    width: 50%;
+    padding:20px;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 10px;
+    
+    @include button-box(2px, 2px, 5px, $border_color);
+}
+
+.button{
+    margin-top: 30px;
+    margin-left: 315px;
+    
+}
+
+.button2{
+    margin-left: 357px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+.score{
+    background-color: $main_color;
+    color: $basic_color;
+    width: 40%;
+    height: 80px;
+    padding: 5px;
+    text-align: center;
+    border:solid rgb(55, 136, 116) 2px;
+    margin: 10px;
+    margin-left: 25px;
+   
+}
+
+.img{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+
+/*
+--------------------------------
+ID selectors 
+--------------------------------
+*/
+
+#rulePopup{   
+    background-color: $secondry_color;
+    color: $basic_color;
+    border:solid 5px #457B9D;
+    position:absolute;
+    top:55%;
+    left:40%;
+    margin-left:-150px;
+    margin-top:-100px;
+    padding: 20px;
+    width:500px;
+}
+
+#closeRulePopup{
+    position:absolute;
+    top:20px;
+    right:10px;
+    font-size:.65em;    
+    cursor:pointer;
+}
+
+#winPopup{
+    
+    background-color: $main_color;
+    color:$basic_color;
+    border:solid 5px #459d8e;
+    position:absolute;
+    top:70%;
+    left: 53%;
+    margin-left:-150px;
+    margin-top:-100px;
+    padding: 30px;
+    width:170px;
+    height: 100px;
+    text-align: center;
+    
+}
+
+#closeWinPopup{
+    position:absolute;
+    top:20px;
+    right:10px;
+    font-size:.65em;    
+    cursor:pointer;
+}
+
+#lostPopup{
+    
+    background-color: $main_color;
+    color:$basic_color;
+    border:solid 5px #459d8e;
+    position:absolute;
+    top:70%;
+    left: 53%;
+    margin-left:-150px;
+    margin-top:-100px;
+    padding: 30px;
+    width:170px;
+    height: 100px;
+    text-align: center;
+}
+
+#closeLostPopup{
+    position:absolute;
+    top:20px;
+    right:10px;
+    font-size:.65em;    
+    cursor:pointer;
+}
+
+#drawPopup{
+    
+    background-color: $main_color;
+    color:$basic_color;
+    border:solid 5px #459d8e;
+    position:absolute;
+    top:70%;
+    left:53%;
+    margin-left:-150px;
+    margin-top:-100px;
+    padding: 30px;
+    width:170px;
+    height: 100px;
+    text-align: center;
+}
+
+#closeDrawPopup{
+    position:absolute;
+    top:20px;
+    right:10px;
+    font-size:.65em;    
+    cursor:pointer;
+}
+
+
