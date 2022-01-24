@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Natsu Deguchi 
+    Final Project -->
+
+<head>
+		<title>Final Project</title>
+		<meta charset="utf-8" />
+		
+		<link rel="stylesheet" href="css/style.css">
+        <script src="script/jquery-3.4.1.min.js" defer="defer"></script>
+        <script src="script/final_project.js" defer="defer"></script>
+        				
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header>Final Project</header>
+    
+    <main>
+
+        <img class="img" src="images/dice_white.jpg" alt="dice pic">
+        <img class="img" src="images/dice_black.jpg" alt="dice pic">
+        <img class="img" src="images/dice_white.jpg" alt="dice pic">
+
+        <h2 class="h2">Let's Play a Dice Game!</h2>
+       
+        <div class="container">
+
+            <div class="main">
+                <div>
+                    <p><strong>Your Dice</strong></p>
+                    <img src="images/dice1.jpg" alt="Dice" id="dice1" >
+                    <img src="images/dice1.jpg" alt="Dice" id="dice2" >
+
+                    <p><strong>Your Score:</strong></p>
+                    
+                    <div class="container">
+                        <div class="score">
+                            <p>Current Score:</p>
+                            <p id="currentScore1"></p>
+                        </div>
+    
+                        <div class="score">
+                            <p>Total Score:</p>
+                            <p id="totalScore1"></p>
+                        </div>
+                    　</div> 
+                </div>
+            </div>
+
+          
+            <div class="side">             
+              <div>
+                  <p><strong>Computer Dice</strong></p>
+                  <img src="images/dice1.jpg" alt="Dice" id="dice3" >
+                  <img src="images/dice1.jpg" alt="Dice" id="dice4" >
+                
+                  <p><strong>Computer's Score:</strong></p>
+
+                  <div class="container">
+                    <div class="score">
+                        <p>Current Score:</p>
+                        <p id="currentScore2"></p>
+                    </div>
+
+                    <div class="score">
+                        <p>Total Score:</p>
+                        <p id="totalScore2"></p>
+                    </div>
+                　</div> 
+                </div>
+            </div>
+
+
+        </div>
+
+        <div>
+            <button id="btn_roll" class="button"> Roll a Dice </button>  
+            <button id="newGame">New Game</button>
+        </div>
+
+        <div>
+            <button id="ruleBtn" class="button2">How to play</button>
+                <div id="rulePopup" class="aside">
+                    <h2>How to play:</h2>
+                    <a id="closeRulePopup"><strong>X</strong></a>
+                        <ul>
+                            <li>To Start, Click on 'Roll Dice' button</li>
+                            <li>You can roll your dice up tp 3 times</li>
+                            <li>After 3 rounds, the game is over and the final result is shown on the screen</li>
+                            <li>If you want to play more, click on 'New Game' button</li>
+                        </ul>
+                    <h2>Rules for scoring:</h2>
+                        <ul>
+                            <li>Your score is the total value of the 2 dices</li>
+                            <li>However, if any of your dice gets 1, you get 0 score on that round</li>
+                            <li>Bonus point, if you roll a pair of the same number, you get double score from that number</li>
+                        </ul>    
+                </div> 
+        </div>
+
+        <aside id="winPopup">
+            <h2>You Won!</h2>
+            <a id="closeWinPopup"><strong>X</strong></a>
+                <p>Congratulation!!<br>Let's keep winning!</p>
+        </aside> 
+
+        <aside id="lostPopup">
+            <h2>You Lost</h2>
+            <a id="closeLostPopup"><strong>X</strong></a>
+                <p>I'm Sorry.... <br>Let's try agian!</p>
+        </aside> 
+
+        <aside id="drawPopup">
+            <h2>It's a DRAW!</h2>
+            <a id="closeDrawPopup"><strong>X</strong></a>
+                <p>Oops! <br>Let's try agian!</p>
+        </aside> 
+
+        <img class="img" src="images/dice_white.jpg" alt="dice pic">
+        <img class="img" src="images/dice_black.jpg" alt="dice pic">
+        <img class="img" src="images/dice_white.jpg" alt="dice pic">
+</main>
+
+    <footer>Natsu Deguchi</footer>
+
+</div>
+
+    
+</body>
+</html>
